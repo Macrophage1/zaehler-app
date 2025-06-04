@@ -1,0 +1,10 @@
+credentials:
+  usernames:
+    hanni:
+      name: Johannes Zabka
+      password: '$2b$12$wWppXR65Z9CzqXYupfNOFONV.VDsW7xiHZ5b3k7vW9Ho6ToSlMX2u'  # geheim123
+
+cookie:
+  name: zaehlercookie
+  key: geheimkey
+  expiry_days: 30
