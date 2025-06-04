@@ -3,7 +3,9 @@ import streamlit as st
 from login import login
 from zaehler import lese_zaehlerwert
 
-authenticated, username = login()
+# main.py
+authenticated, username = True, "Hanni"  # Testweise immer eingeloggt
+
 
 if authenticated:
     st.title("🔌 RS485 Zählerauslese")
