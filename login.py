@@ -16,11 +16,8 @@ def login():
 
     name = authenticator.login(location="main")
 
-    if authenticator.authentication_status:
+    if name:
         authenticator.logout("Logout", "sidebar")
         return True, name
-    elif authenticator.authentication_status is False:
-        st.error("Benutzername oder Passwort falsch")
-    elif authenticator.authentication_status is None:
-        st.warning("Bitte einloggen")
-    return False, None
+    else:
+        return False, None
