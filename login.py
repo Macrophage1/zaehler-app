@@ -14,15 +14,14 @@ def login():
         config['cookie']['expiry_days']
     )
 
-    name = authenticator.login(location='main')
+    name = authenticator.login(location="main")
 
-    # Das ist der Trick: Wir holen den Status aus dem session_state!
-    if "authentication_status" in st.session_state:
-        if st.session_state["authentication_status"]:
-            authenticator.logout('Logout', 'sidebar')
-            return True, name
-        elif st.session_state["authentication_status"] is False:
-            st.error("Benutzername oder Passwort falsch")
-        elif st.session_state["authentication_status"] is None:
-            st.warning("Bitte einloggen")
-    return False, None
+if "authentication_status" in st.session_state:
+    if st.session_state["authentication_status"]:
+        authenticator.logout("Logout", "sidebar")
+        return True, name
+    elif st.session_state["authentication_status"] is False:
+        st.error("Benutzername oder Passwort falsch")
+    elif st.session_state["authentication_status"] is None:
+        st.warning("Bitte einloggen")
+
