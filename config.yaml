@@ -1,6 +1,6 @@
 credentials:
   usernames:
-    testuser:
+    test:
       name: Test Benutzer
       password: '$2b$12$WaNuvcuwGUS8bTDDTZ9Et.ha3s0AYJjRMUUbCxsHDpyqkrmlDw7DC'  # test123
 
