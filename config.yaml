@@ -7,4 +7,5 @@ credentials:
 cookie:
   name: zaehlercookie
   key: geheimkey
-  expiry_days: 30
+  expiry_days: 30  # config geprüft am 04.06.
+
