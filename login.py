@@ -14,10 +14,13 @@ def login():
         config['cookie']['expiry_days']
     )
 
-    name = authenticator.login(location="main")
+    name, authentication_status, username = authenticator.login(location='main')
 
-    if name:
-        authenticator.logout("Logout", "sidebar")
-        return True, name
-    else:
-        return False, None
+    if authentication_status:
+        authenticator.logout('Logout', 'sidebar')
+        return True, username
+    elif authentication_status is False:
+        st.error('Benutzername oder Passwort falsch')
+    elif authentication_status is None:
+        st.warning('Bitte einloggen')
+    return False, None
