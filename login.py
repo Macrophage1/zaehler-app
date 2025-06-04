@@ -14,7 +14,7 @@ def login():
         config['cookie']['expiry_days']
     )
 
-    name = authenticator.login("Login", location="main")
+    name = authenticator.login(location="main")
     authentication_status = authenticator.authentication_status
 
     if authentication_status:
@@ -25,4 +25,3 @@ def login():
     elif authentication_status is None:
         st.warning("Bitte einloggen")
     return False, None
-
