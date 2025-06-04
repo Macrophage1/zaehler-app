@@ -1,6 +1,5 @@
-### requirements.txt
 streamlit
 streamlit-authenticator
 pyserial
 pymodbus
-yaml
+pyyaml
